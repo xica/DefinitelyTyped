@@ -984,4 +984,10 @@ declare module "aws-sdk" {
 		}
 
 	}
+        export module Lambda {
+                export interface Context {
+                        done(errr: any, value: string): void;
+                        invokeid: string;
+                }
+        }
 }
